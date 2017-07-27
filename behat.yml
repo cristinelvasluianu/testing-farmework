@@ -1,22 +1,21 @@
 default:
   suites:
     default:
-      paths: [ %paths.base%/app/tests/acceptance/features ]
-      contexts: [ MyApp\Tests\Acceptance\FeatureContext ]
+      paths: [%paths.base%]
   extensions:
     Behat\MinkExtension:
-      base_url:  http://www.qa.wepay-inc.com
+      base_url:  http://www.google.com
       browser_name: chrome
       javascript_session: selenium2
       selenium2:
         wd_host: http://127.0.0.1:4442/wd/hub
         capabilities: { "browser": "chrome" }
 
-ci:
-  formatters:
-    pretty: true
+#ci:
+#  formatters:
+#    pretty: true
 #    progress: [logs/progress.log]
 #    junit: [logs/xml]
-  extensions:
-    Behat\MinkExtension:
-      base_url:  http://google.com
+#  extensions:
+#    Behat\MinkExtension:
+#      base_url:  http://google.com
